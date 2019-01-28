@@ -8,13 +8,12 @@ import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.Arrays;
 
-
 public class MainClass {
 
     private final static String CURRENCY_ERROR_MSG = "Given currency (%s) is invalid, correct currencies are: %s";
     private final static String DATE_ERROR_MSG = "Cannot parse date in give format, valid pattern: \"yyyy-MM-d\"";
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Currency currency = null;
         LocalDate startDate = null;
         LocalDate end = null;
