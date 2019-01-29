@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 public class DateFormatter {
 
     private final static String INPUT_PATTERN = "yyyy-MM-d";
-    private final static String OUTPUT_PATTERN = "YYMMDD";
+    private final static String OUTPUT_PATTERN = "yyMMdd";
 
     public static LocalDate formatDateFromString(String date) {
         return formatDateFromString(INPUT_PATTERN, date);
@@ -24,5 +24,9 @@ public class DateFormatter {
 
     public static String formatDateToSpecialString(String pattern, LocalDate date){
         return date.format(DateTimeFormatter.ofPattern(pattern));
+    }
+
+    public static LocalDate formatDateFromSpecialString(String date){
+        return formatDateFromString(OUTPUT_PATTERN, date.substring(date.length() - 6));
     }
 }
